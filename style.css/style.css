@@ -1,8 +1,19 @@
 /* INDEX */
-
+    
 /* menu option */
 .navbar-collapse{
     font-family:'Signika Negative', sans-serif;
     flex-grow: initial;
 }
 /* promociones */
+
+/* pie */
+@media screen and (max-width:960px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mercadopago{
+        width: 50px;
+    }
+}
