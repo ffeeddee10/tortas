@@ -8,12 +8,51 @@
 /* promociones */
 
 /* pie */
-@media screen and (max-width:960px){
-    .container{
-        display: flex;
-        justify-content: space-between;
+/* pie de pagina */
+.pie_option_item{
+    width: 30px;
+}
+.pie_option_maps{
+    width: auto;
+    
+
+}
+.pie_option_mercadopago{
+    width: 300px;
+}
+.pie{
+    background-color:black;
+}
+.pie_item{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+/* facebook */
+.facebook{
+    
+}
+/* whatsapp */
+.whatsapp{
+    width: 3%;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+/* instragram */
+.instragram{
+    width: 30px;
+}
+/* mercadopago */
+.mercadopago{
+    width: 30%;
+}
+/* mapa */
+@media screen and (min-width:320px){
+    .mapa{
+        margin-right: 15px;
     }
-    .mercadopago{
-        width: 50px;
-    }
+    
+
 }
