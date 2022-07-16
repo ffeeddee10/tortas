@@ -1,4 +1,5 @@
 /* menu option */
-.navbar{
-    
+.navbar-collapse{
+    font-family:'Signika Negative', sans-serif;
+    flex-grow: initial;
 }
