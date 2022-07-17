@@ -1,68 +1,156 @@
 /* INDEX */
-    
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
 /* menu option */
-.navbar-collapse{
-    font-family:'Signika Negative', sans-serif;
+.navbar-collapse {
+    font-family: 'Signika Negative', sans-serif;
     flex-grow: initial;
 }
+
 /* promociones */
 
 /* pie */
 /* pie de pagina */
-.pie_option_item{
+.pie_option_item {
     width: 30px;
 }
-.pie_option_maps{
+
+.pie_option_maps {
     width: auto;
-    
+
 
 }
-.pie_option_mercadopago{
+
+.pie_option_mercadopago {
     width: 300px;
 }
-.pie{
-    background-color:black;
+
+.pie {
+    background-color: black;
 }
-.pie_item{
+
+.pie_item {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
 
 }
+
 /* facebook */
-.facebook{
-    
-}
-/* whatsapp */
-.whatsapp{
-    width: 3%;
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-}
+.facebook {}
+
+
 /* instragram */
-.instragram{
+.instragram {
     width: 30px;
 }
+
 /* mercadopago */
-.mercadopago{
+.mercadopago {
     width: 30%;
 }
+
 /* mapa */
-@media screen and (min-width:320px){
-    .mapa{
+@media screen and (min-width:320px) {
+    .mapa {
         margin-right: 15px;
     }
-    
+
+    /* whatsapp */
+    .whatsapp {
+        width: 15%;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+    }
 
 }
 
 /* tortas */
 /* foto de tortas */
-@media screen and (min-width:1024px){
-    .imagenes{
+@media screen and (min-width:1024px) {
+    .imagenes {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+
+    /* anular whatsapp en escritorio*/
+    .whatsapp {
+        display: none;
+
+    }
+
+    .imagenes:hover {
+        /* animaciones */
+        transform: scale(1.1);
+        transition: all 1s;
+
+    }
+
+    .text_imagenes {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tortas {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .promociones {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+@media screen and (min-width:320px) {
+    .imagenes {
         padding-top: 5px;
         padding-bottom: 5px;
     }
-        
+
+    .tortas {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
     }
+
+    .promociones {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+}
