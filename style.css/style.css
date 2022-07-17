@@ -56,3 +56,13 @@
     
 
 }
+
+/* tortas */
+/* foto de tortas */
+@media screen and (min-width:1024px){
+    .imagenes{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+        
+    }
