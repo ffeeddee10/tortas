@@ -40,14 +40,6 @@
 
 }
 
-/* facebook */
-.facebook {}
-
-
-/* instragram */
-.instragram {
-    width: 30px;
-}
 
 /* mercadopago */
 .mercadopago {
@@ -153,4 +145,28 @@
         padding-right: 3px;
     }
 }
+
+
+
+/* pages galletitas - box y contacto */
+
+/* promociones */
+.promo {
+    display: grid;
+    padding: 15px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10PX 10PX;
+
+}
+
+.promo_item {
+    width: 90%;
+    height: 90%;
+    border-radius: 1%;
+
+}
+.galletitas {
+    font-family: 'Signika Negative', sans-serif;
+    flex-grow: initial;
 }
