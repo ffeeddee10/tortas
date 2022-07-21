@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.torta {
+  background-color: tomato;
+}
+.tortacontainer .tortarow {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen {
+  .tortacontainer .tortarow {
+    min-width: 1020px;
+  }
+  .tortacontainer .tortarow .text_imagenes {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.text_imagenes {
+  background-color: aquamarine;
+}/*# sourceMappingURL=main.css.map */

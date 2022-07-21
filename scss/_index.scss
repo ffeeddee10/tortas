@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.torta {
+    background-color: tomato;
+
+    &container &row {
+        display: flex;
+        justify-content: flex-end;        
+
+        @media screen {
+            min-width: 1020px;
+
+            .text_imagenes {
+                background-color: aqua;
+                display: flex;
+                flex-direction: row;
+
+            }
+
+        }
+    }
+}
+.text_imagenes{
+    background-color: aquamarine;
+}
