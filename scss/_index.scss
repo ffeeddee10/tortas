@@ -1,28 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
+@import "variable";
+
+.promo {
+    display: grid;
+    padding: 15px;
+    justify-content: center;
+    grid-template-columns: map-get($map: $grid-column , $key: grid-columns-two);
+    gap: 10PX 10PX;
+
 }
 
-.torta {
-    background-color: tomato;
+.promo_item {
+    width: 90%;
+    height: 90%;
+    border-radius: 1%;
 
-    &container &row {
-        display: flex;
-        justify-content: flex-end;        
-
-        @media screen {
-            min-width: 1020px;
-
-            .text_imagenes {
-                background-color: aqua;
-                display: flex;
-                flex-direction: row;
-
-            }
-
-        }
-    }
 }
-.text_imagenes{
-    background-color: aquamarine;
+
+.galletitas {
+    font-family: 'Signika Negative', sans-serif;
+    flex-grow: initial;
 }

@@ -1,0 +1,100 @@
+
+@media screen and (min-width:320px) {
+    .mapa {
+        margin-right: 15px;
+    }
+    
+    .whatsapp {
+        width: 15%;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    .padding{
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .imagenes {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+
+    .whatsapp {
+        display: none;
+
+    }
+
+    .imagenes:hover {
+        transform: scale(1.1);
+        transition: all 1s;
+
+    }
+
+    .text_imagenes {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tortas {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .promociones {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+@media screen and (min-width:320px) {
+    .imagenes {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .tortas {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .promociones {
+        font-family: 'Signika Negative', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}

@@ -1,26 +1,148 @@
-* {
-  margin: 0;
-  padding: 0;
+.padding {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-.torta {
-  background-color: tomato;
+.promo {
+  display: grid;
+  padding: 15px;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10PX 10PX;
 }
-.tortacontainer .tortarow {
+
+.promo_item {
+  width: 90%;
+  height: 90%;
+  border-radius: 1%;
+}
+
+.galletitas {
+  font-family: "Signika Negative", sans-serif;
+  flex-grow: initial;
+}
+
+.pie_option_item {
+  width: 30px;
+}
+
+.pie_option_maps {
+  width: auto;
+}
+
+.pie_option_mercadopago {
+  width: 300px;
+}
+
+.pie {
+  background-color: black;
+}
+
+.pie_item {
   display: flex;
-  justify-content: flex-end;
-}
-@media screen {
-  .tortacontainer .tortarow {
-    min-width: 1020px;
-  }
-  .tortacontainer .tortarow .text_imagenes {
-    background-color: aqua;
-    display: flex;
-    flex-direction: row;
-  }
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.text_imagenes {
-  background-color: aquamarine;
+.mercadopago {
+  width: 30%;
+}
+
+.navbar-collapse {
+  flex-grow: initial;
+  font-family: "Signika Negative", sans-serif;
+}
+
+@media screen and (min-width: 320px) {
+  .mapa {
+    margin-right: 15px;
+  }
+  .whatsapp {
+    width: 15%;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .padding {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .imagenes {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .whatsapp {
+    display: none;
+  }
+  .imagenes:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+  }
+  .text_imagenes {
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .tortas {
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .promociones {
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
+@media screen and (min-width: 320px) {
+  .imagenes {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .tortas {
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .promociones {
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
+.padding {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
 }/*# sourceMappingURL=main.css.map */
