@@ -6,10 +6,21 @@
   padding-right: 4px;
 }
 
-.promo {
+.padding {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-right: 4px;
+}
+
+.grid, .promo {
   display: grid;
   padding: 15px;
   justify-content: center;
+}
+
+.promo {
   grid-template-columns: repeat(2, 1fr);
   gap: 10PX 10PX;
 }
@@ -140,11 +151,4 @@
     padding-left: 3px;
     padding-right: 3px;
   }
-}
-.padding {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-right: 4px;
 }/*# sourceMappingURL=main.css.map */

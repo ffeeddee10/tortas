@@ -1,9 +1,12 @@
 @import "variable";
+.grid{
+    display: grid;
+        padding: 15px;
+        justify-content: center;
+}
 
 .promo {
-    display: grid;
-    padding: 15px;
-    justify-content: center;
+    @extend .grid;
     grid-template-columns: map-get($map: $grid-column , $key: grid-columns-two);
     gap: 10PX 10PX;
 
