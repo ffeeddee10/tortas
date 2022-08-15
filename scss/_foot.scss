@@ -1,21 +1,78 @@
 .pie {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0px;
     background-color: black;
+    background-size: cover;
+
 
     &-pagina-title {
         color: #FFFFFF;
+        margin: 5%;
+        text-align: center;
+        &-container{
+            list-style: none;
+        }
     }
 }
 
-.pie-pagina-text-nav {
-    color: #FFFFFF;
+.pie-pagina {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    &-redes-icons{
+        padding:0 5px 5px 0;
+
+    }
+}
+
+
+.pie-pagina-text {
     flex-direction: column;
+    color: #FFFFFF;
+    list-style: none;
+
+    &-nav {
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 10px;
+        text-decoration: none;
+        list-style: none;
+    }
 }
 
 .pie-pagina-icons {
     display: flex;
     flex-direction: column;
     width: 50px;
+
+
+}
+
+.pie-pagina-pagos {
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: map-get($map: $grid-column , $key: grid-columns-tree);
+    grid-template-rows: map-get($map: $grid-rows , $key: grid-rows-four);
+    list-style: none;
+    
+    &-icons {
+        margin: 0 0 5px 5px;
+        gap: 5px;
+        width: 40px;
+        padding: 2px;
+    }
+}
+
+.copyright {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 20px;
 }

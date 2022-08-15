@@ -36,25 +36,82 @@
   flex-grow: initial;
 }
 
+.whatsapp-fixed {
+  position: fixed;
+  width: 60px;
+  right: 15px;
+  bottom: 15px;
+}
+
 .pie {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  padding: 50px 0px;
   background-color: black;
+  background-size: cover;
 }
 .pie-pagina-title {
   color: #FFFFFF;
+  margin: 5%;
+  text-align: center;
+}
+.pie-pagina-title-container {
+  list-style: none;
 }
 
+.pie-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10px;
+}
+.pie-pagina-redes-icons {
+  padding: 0 5px 5px 0;
+}
+
+.pie-pagina-text {
+  flex-direction: column;
+  color: #FFFFFF;
+  list-style: none;
+}
 .pie-pagina-text-nav {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
 }
 
 .pie-pagina-icons {
   display: flex;
   flex-direction: column;
   width: 50px;
+}
+
+.pie-pagina-pagos {
+  margin: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  list-style: none;
+}
+.pie-pagina-pagos-icons {
+  margin: 0 0 5px 5px;
+  gap: 5px;
+  width: 40px;
+  padding: 2px;
+}
+
+.copyright {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0px 20px;
 }
 
 .navbar-collapse {
