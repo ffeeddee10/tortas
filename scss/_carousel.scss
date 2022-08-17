@@ -1,4 +1,15 @@
 .color-text-carousel{
     color: map-get($map: $color-text, $key: color-text-one);
-    -webkit-text-stroke: 0.5px white ;
+    -webkit-text-stroke: 0.2px white ;
+}
+.d-block{
+   padding: 15px 180px 15px 180px;
+}
+.carousel-control-prev-icon {
+    background-color: black;
+    height: 80px;
+}
+.carousel-control-next-icon{
+    background-color: black;
+    height: 80px;
 }
