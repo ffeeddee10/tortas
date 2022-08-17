@@ -4,3 +4,30 @@
     right: 15px;
     bottom: 15px;
 }
+.promociones{
+    display: block;
+    display: inline-block;
+    margin: 0 0 -15px 0;
+    padding: 5px 5px 5px 5px;
+    &-head{
+        background-color: map-get($map: $colores-fondo, $key: color-fondo-two);
+        display: block;
+        text-align: center;
+        padding: 5px 0 5px 0;
+        margin: -5px 0 -15px 0;
+    }
+}
+.logo{
+    background-color:map-get($map: $colores-fondo, $key: color-fondo-one);
+    &-icons{
+        width: 140px;
+        padding: 5px 0 5px 5px;
+    }
+}
+.promociones-pro {
+    color: map-get($map: $color-text, $key:color-text-two );
+}
+* {
+    margin: 0;
+    padding: 0;
+}

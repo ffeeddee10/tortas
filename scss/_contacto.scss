@@ -1,0 +1,7 @@
+.btn-outline-dark{
+    background-color: map-get($map: $colores-fondo , $key: color-fondo-two);
+    margin: 5px 0 5px 0;
+}
+.contacto{
+    width: 30%;
+}

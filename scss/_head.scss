@@ -2,3 +2,8 @@
     flex-grow: initial;
     font-family: 'Signika Negative', sans-serif;
 }
+.btn-outline-success {
+    color: map-get($map: $color-text, $key: color-text-two);
+    border-color: map-get($map: $color-text, $key: color-text-two);
+    background-color:map-get($map: $colores-fondo, $key: color-fondo-one);
+}

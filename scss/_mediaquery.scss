@@ -13,13 +13,7 @@
     
 }
 
-@media screen and (min-width:1024px) {
-    .padding{
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
+
     .imagenes {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -55,18 +49,6 @@
         padding-right: 3px;
     }
 
-    .promociones {
-        font-family: 'Signika Negative', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color: black;
-        color: aliceblue;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-}
 
 @media screen and (min-width:320px) {
     .imagenes {

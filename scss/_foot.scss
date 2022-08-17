@@ -4,7 +4,6 @@
     background-color: black;
     background-size: cover;
 
-
     &-pagina-title {
         color: #FFFFFF;
         margin: 5%;
@@ -30,14 +29,11 @@
 
 
 .pie-pagina-text {
-    flex-direction: column;
     color: #FFFFFF;
     list-style: none;
 
     &-nav {
         color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
         margin: auto;
         padding: 10px;
         text-decoration: none;
