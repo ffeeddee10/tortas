@@ -56,6 +56,9 @@
   padding: 5px 0 5px 0;
   margin: -5px 0 -15px 0;
 }
+.promociones-head-text {
+  font-family: "Raleway", sans-serif;
+}
 
 .logo {
   background-color: black;
@@ -75,8 +78,9 @@
 }
 
 .color-text-carousel {
-  color: black;
-  -webkit-text-stroke: 0.2px white;
+  color: white;
+  -webkit-text-stroke: 0.4px #ED9898;
+  font-family: "Raleway", sans-serif;
 }
 
 .d-block {
@@ -103,9 +107,12 @@
   color: #FFFFFF;
   margin: 5%;
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 .pie-pagina-title-container {
   list-style: none;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
 }
 
 .pie-pagina {
@@ -123,6 +130,7 @@
 .pie-pagina-text {
   color: #FFFFFF;
   list-style: none;
+  font-family: "Raleway", sans-serif;
 }
 .pie-pagina-text-nav {
   color: #FFFFFF;
@@ -163,7 +171,7 @@
 
 .navbar-collapse {
   flex-grow: initial;
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .btn-outline-success {
@@ -172,17 +180,15 @@
   background-color: black;
 }
 
-@media screen and (min-width: 320px) {
-  .mapa {
-    margin-right: 15px;
-  }
-  .whatsapp {
-    width: 15%;
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-  }
+.nav-link {
+  font-size: 20px;
 }
+
+.navbar-toggler {
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
 .imagenes {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -198,13 +204,13 @@
 }
 
 .text_imagenes {
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   justify-content: center;
 }
 
 .tortas {
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Raleway", sans-serif;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -215,13 +221,26 @@
   padding-right: 3px;
 }
 
-@media screen and (min-width: 320px) {
+.promociones {
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+}
+.promociones-pro {
+  display: block;
+  display: inline-block;
+  margin: 0 0 0 0;
+}
+
+@media screen and (max-width: 1024px) {
   .imagenes {
     padding-top: 5px;
     padding-bottom: 5px;
   }
   .tortas {
-    font-family: "Signika Negative", sans-serif;
+    font-family: "Raleway", sans-serif;
     display: flex;
     justify-content: center;
     background-color: black;
@@ -231,16 +250,51 @@
     padding-left: 3px;
     padding-right: 3px;
   }
-  .promociones {
-    font-family: "Signika Negative", sans-serif;
-    display: flex;
+  .pie {
+    padding: 5px 5px 5px 5px;
+  }
+  .pie-pagina {
+    display: none;
+    display: grid;
     justify-content: center;
-    background-color: black;
-    color: aliceblue;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 3px;
-    padding-right: 3px;
+  }
+  .pie-pagina-pagos {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-block {
+    width: 100%;
+  }
+  .pie-pagina-redes {
+    text-align: center;
+  }
+  .pie-pagina-redes-icons {
+    width: 100px;
+    height: 30px;
+  }
+  .pie-pagina {
+    text-align: center;
+  }
+  .pie-pagina-icons {
+    display: grid;
+    position: fixed;
+  }
+  .pie-pagina-text-nav {
+    margin-right: 30px;
+  }
+  .pie-pagina-title {
+    font-size: 0%;
+  }
+  .pie-pagina-text {
+    margin-right: 15px;
+  }
+  .margin {
+    margin-top: -30px;
+  }
+  .nav-link {
+    display: grid;
+    justify-content: end;
   }
 }
 .btn-outline-dark {
@@ -249,5 +303,16 @@
 }
 
 .contacto {
-  width: 30%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.contacto-direccion {
+  list-style: none;
+}
+
+.mb-3 {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

@@ -1,15 +1,20 @@
-.color-text-carousel{
-    color: map-get($map: $color-text, $key: color-text-one);
-    -webkit-text-stroke: 0.2px white ;
+.color-text-carousel {
+    color: map-get($map: $color-text, $key: color-text-tree);
+    -webkit-text-stroke: 0.4px #ED9898;
+    font-family: 'Raleway', sans-serif;
+
 }
-.d-block{
-   padding: 15px 10% 15px 10%;
+
+.d-block {
+    padding: 15px 10% 15px 10%;
 }
+
 .carousel-control-prev-icon {
     background-color: black;
     height: 80px;
 }
-.carousel-control-next-icon{
+
+.carousel-control-next-icon {
     background-color: black;
     height: 80px;
 }

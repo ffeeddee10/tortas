@@ -1,82 +1,119 @@
 
-@media screen and (min-width:320px) {
-    .mapa {
-        margin-right: 15px;
-    }
-    
-    .whatsapp {
-        width: 15%;
-        position: fixed;
-        right: 15px;
-        bottom: 15px;
-    }
-    
+
+.imagenes {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 
+.whatsapp {
+    display: none;
 
+}
+
+.imagenes:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+
+}
+
+.text_imagenes {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.tortas {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.promociones {
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+
+    &-pro {
+        display: block;
+        display: inline-block;
+        margin: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width:1024px) {
     .imagenes {
         padding-top: 5px;
         padding-bottom: 5px;
-
     }
 
-    .whatsapp {
+    .tortas {
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: aliceblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .pie{
+        padding: 5px 5px 5px 5px;
+    }
+
+    .pie-pagina {
         display: none;
-
-    }
-
-    .imagenes:hover {
-        transform: scale(1.1);
-        transition: all 1s;
-
-    }
-
-    .text_imagenes {
-        font-family: 'Signika Negative', sans-serif;
-        display: flex;
+        display: grid;
         justify-content: center;
+        &-pagos{
+            display: block;
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
+    .d-block{
+        width: 100%;
 
-    .tortas {
-        font-family: 'Signika Negative', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color: black;
-        color: aliceblue;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
     }
-
-
-@media screen and (min-width:320px) {
-    .imagenes {
-        padding-top: 5px;
-        padding-bottom: 5px;
+    .pie-pagina-redes{
+        text-align: center;
+        &-icons{
+            width: 100px;
+            height: 30px;
+        }
     }
+    .pie-pagina{
+        text-align: center;
+        &-icons{
+            display: grid;
+            position: fixed;
 
-    .tortas {
-        font-family: 'Signika Negative', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color: black;
-        color: aliceblue;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
+            
+        }
     }
-
-    .promociones {
-        font-family: 'Signika Negative', sans-serif;
-        display: flex;
-        justify-content: center;
-        background-color: black;
-        color: aliceblue;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 3px;
-        padding-right: 3px;
+    .pie-pagina-text-nav{
+        margin-right: 30px;
+    }
+    .pie-pagina-title{
+       font-size: 0%;
+    }
+    .pie-pagina-text{
+        margin-right: 15px;
+    }
+    .margin{
+        margin-top: -30px;
+    }
+    .nav-link{
+        display: grid;
+        justify-content: end;
     }
 }
