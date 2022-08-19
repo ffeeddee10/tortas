@@ -3,6 +3,7 @@
     width: 60px;
     right: 15px;
     bottom: 15px;
+    z-index: 9;
 }
 .promociones{
     display: block;
@@ -34,4 +35,7 @@
 * {
     margin: 0;
     padding: 0;
+}
+.fixed{
+    display: none;
 }

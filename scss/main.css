@@ -41,6 +41,7 @@
   width: 60px;
   right: 15px;
   bottom: 15px;
+  z-index: 9;
 }
 
 .promociones {
@@ -75,6 +76,10 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+.fixed {
+  display: none;
 }
 
 .color-text-carousel {
@@ -287,7 +292,7 @@
     font-size: 0%;
   }
   .pie-pagina-text {
-    margin-right: 15px;
+    margin-right: 25px;
   }
   .margin {
     margin-top: -30px;
@@ -295,6 +300,15 @@
   .nav-link {
     display: grid;
     justify-content: end;
+  }
+  .logo-icons {
+    display: none;
+  }
+  .fixed {
+    display: grid;
+    position: fixed;
+    z-index: 10;
+    margin-top: -65px;
   }
 }
 .btn-outline-dark {
