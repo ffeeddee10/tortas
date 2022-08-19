@@ -275,13 +275,14 @@
     text-align: center;
   }
   .pie-pagina-redes-icons {
-    width: 100px;
+    width: 50px;
     height: 30px;
   }
   .pie-pagina {
     text-align: center;
   }
   .pie-pagina-icons {
+    visibility: collapse;
     display: grid;
     position: fixed;
   }

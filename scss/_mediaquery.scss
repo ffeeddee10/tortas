@@ -87,13 +87,14 @@
     .pie-pagina-redes{
         text-align: center;
         &-icons{
-            width: 100px;
+            width: 50px;
             height: 30px;
         }
     }
     .pie-pagina{
         text-align: center;
         &-icons{
+            visibility: collapse;
             display: grid;
             position: fixed;
 
