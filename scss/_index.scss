@@ -30,7 +30,6 @@
     grid-template-columns: map-get($map: $grid-column, $key:grid-columns-tree );
     gap: 1% 1%;
     margin-bottom: 5%;
-    object-fit: none;
     &-img{
         width: 100%;
         object-fit: scale-down;

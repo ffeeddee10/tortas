@@ -91,6 +91,7 @@
 
     }
 
+
     .promociones-pro {
         font-size: 15px;
     }
@@ -139,7 +140,7 @@
     .nav-link {
         display: grid;
         justify-content: end;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .logo-icons {
@@ -179,5 +180,10 @@
         margin-bottom: 15%;
         object-fit: scale-down;
 
+    }
+    .carousel-item{
+        width: 100%;
+        padding: 50px 50px 50px 50px;
+        
     }
 }
