@@ -12,7 +12,9 @@ $grid-column: (
     grid-columns-two: repeat(2, 1fr),
     grid-columns-tree:repeat(3, 1fr),
     grid-columns-four:repeat(4, 1fr),
-   
+    grid-columns-seven:repeat(5, 1fr),
+    grid-columns-nine:repeat(6, 1fr),
+
 );
 $grid-rows: (
     grid-rows-two: repeat(2, 1fr),

@@ -21,18 +21,17 @@
 }
 
 .promo {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10PX 10PX;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 10px;
 }
 
 .promo_item {
-  width: 90%;
-  height: 90%;
+  width: 100%;
   border-radius: 1%;
 }
 
 .galletitas {
-  font-family: "Signika Negative", sans-serif;
+  font-family: "Raleway", sans-serif;
   flex-grow: initial;
 }
 
@@ -82,6 +81,16 @@
   display: none;
 }
 
+.mapa {
+  text-align: center;
+}
+.mapa-img {
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+  border-radius: 10%;
+}
+
 .color-text-carousel {
   color: white;
   -webkit-text-stroke: 0.4px #ED9898;
@@ -127,6 +136,7 @@
   max-width: 1200px;
   margin: auto;
   margin-top: 10px;
+  opacity: 60%;
 }
 .pie-pagina-redes-icons {
   padding: 0 5px 5px 0;
@@ -172,6 +182,23 @@
   justify-content: center;
   margin: auto;
   padding: 0px 20px;
+  opacity: 60%;
+}
+
+.contacto-imagenes {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  justify-content: center;
+  list-style: none;
+  margin-top: 30px;
+}
+.contacto-imagenes-icons {
+  width: 80px;
+  height: 80px;
+}
+.contacto-imagenes .boton:hover {
+  transform: scale(2.5);
+  transition: all 1s;
 }
 
 .navbar-collapse {
@@ -204,7 +231,7 @@
 }
 
 .imagenes:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
   transition: all 1s;
 }
 
@@ -244,6 +271,10 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  .promo {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .tortas {
     font-family: "Raleway", sans-serif;
     display: flex;
@@ -271,6 +302,9 @@
   .d-block {
     width: 100%;
   }
+  .promociones-pro {
+    font-size: 15px;
+  }
   .pie-pagina-redes {
     text-align: center;
   }
@@ -288,6 +322,7 @@
   }
   .pie-pagina-text-nav {
     margin-right: 30px;
+    font-size: 10px;
   }
   .pie-pagina-title {
     font-size: 0%;
@@ -295,12 +330,16 @@
   .pie-pagina-text {
     margin-right: 25px;
   }
+  .pie-pagina-text-text {
+    font-size: 10px;
+  }
   .margin {
     margin-top: -30px;
   }
   .nav-link {
     display: grid;
     justify-content: end;
+    font-size: 10px;
   }
   .logo-icons {
     display: none;
@@ -309,7 +348,18 @@
     display: grid;
     position: fixed;
     z-index: 10;
-    margin-top: -65px;
+    margin-top: -55px;
+    width: 100px;
+  }
+  .contacto-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .promociones-head-text {
+    font-size: 15px;
+  }
+  .text-final {
+    font-size: 10px;
   }
 }
 .btn-outline-dark {

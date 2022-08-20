@@ -39,3 +39,12 @@
 .fixed{
     display: none;
 }
+.mapa{ 
+    text-align: center;
+    &-img{
+        width: 200px;
+        height: 200px;
+        padding-top: 10px;
+        border-radius: 10%;
+    }
+}

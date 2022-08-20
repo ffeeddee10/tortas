@@ -3,6 +3,7 @@
     padding: 50px 0px;
     background-color: black;
     background-size: cover;
+    
 
     &-pagina-title {
         color: #FFFFFF;
@@ -26,9 +27,12 @@
     max-width: 1200px;
     margin: auto;
     margin-top: 10px;
+    opacity: 60%;
+    
 
     &-redes-icons {
         padding: 0 5px 5px 0;
+       
 
     }
 }
@@ -77,4 +81,24 @@
     justify-content: center;
     margin: auto;
     padding: 0px 20px;
+    opacity: 60%;
+}
+.contacto-imagenes{
+    display: grid;
+    grid-template-columns:repeat(6,100px);
+    justify-content: center;
+    list-style: none;
+    margin-top: 30px;
+
+
+
+    &-icons{
+        width: 80px;
+        height: 80px;
+    }
+    .boton:hover{
+        transform: scale(2.5);
+        transition:all 1s;
+        
+    }
 }

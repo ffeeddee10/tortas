@@ -1,26 +1,27 @@
 @import "variable";
 
-.grid{
+.grid {
     display: grid;
-        padding: 15px;
-        justify-content: center;
+    padding: 15px;
+    justify-content: center;
 }
 
 .promo {
     @extend .grid;
-    grid-template-columns: map-get($map: $grid-column , $key: grid-columns-two);
-    gap: 10PX 10PX;
-
+    grid-template-columns: map-get($map: $grid-column , $key: grid-columns-tree);
+    gap: 10px 10px;
 }
 
 .promo_item {
-    width: 90%;
-    height: 90%;
+    width: 100%;
     border-radius: 1%;
+
+
 
 }
 
 .galletitas {
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Raleway',
+        sans-serif;
     flex-grow: initial;
 }
