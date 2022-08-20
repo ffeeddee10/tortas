@@ -35,6 +35,25 @@
   flex-grow: initial;
 }
 
+.destacadas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1% 1%;
+  margin-bottom: 5%;
+  -o-object-fit: none;
+     object-fit: none;
+}
+.destacadas-img {
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.destacadas-text {
+  text-align: center;
+  margin-top: 5%;
+}
+
 .whatsapp-fixed {
   position: fixed;
   width: 60px;
@@ -68,10 +87,6 @@
   padding: 5px 0 5px 5px;
 }
 
-.promociones-pro {
-  color: #ED9898;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -97,8 +112,8 @@
   font-family: "Raleway", sans-serif;
 }
 
-.d-block {
-  padding: 15px 10% 15px 10%;
+.carousel-item {
+  padding: 300px;
 }
 
 .carousel-control-prev-icon {
@@ -360,6 +375,17 @@
   }
   .text-final {
     font-size: 10px;
+  }
+  .destacadas-text {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+  }
+  .destacadas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 15%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
 }
 .btn-outline-dark {
