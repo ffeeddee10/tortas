@@ -1,6 +1,6 @@
 //EN LA WEB SE LE MUESTRA UNA SERIE DE FOTOS CON DISEÑO DE TORTAS CON SU RESPECTIVO NOMBRE, SE LE PREGUNTARA SI SU DISEÑO
 // ESTA DISPONIBLE
-
+/*
 class tortas {
     constructor(nombre, relleno, kilos, recubierto, opinion) {
         this.nombre = nombre
@@ -123,5 +123,11 @@ let preciofinal = calculandodescuento(totalcompra)
 
 
 alert('tu compra total es ' + preciofinal)
+*/
 
+// creando boton de compra en mi pagina
 
+const boton = document.getElementsByClassName('boton')
+boton.onclick =() => {
+    console.log('gracias perri')
+}
