@@ -1,26 +1,54 @@
 //EN LA WEB SE LE MUESTRA UNA SERIE DE FOTOS CON DISEÑO DE TORTAS CON SU RESPECTIVO NOMBRE, SE LE PREGUNTARA SI SU DISEÑO
 // ESTA DISPONIBLE
-/*
+
 class tortas {
-    constructor(nombre, relleno, kilos, recubierto, opinion) {
+    constructor(nombre, precio, relleno, kilos, recubierto, opinion) {
         this.nombre = nombre
+        this.precio = precio
         this.relleno = relleno
         this.kilos = kilos
         this.recubierto = recubierto
     }
+    cardproductos() {
+        const card = `
+        <div class="card">
+            <p>hola</p>
+            <img src="./image/tortas/torta_17.jpg" alt="destacadas" class="destacadas-img">
+            <button class="boton">${this.precio}</button>
+        div>
+     `
+        const destacadas = document.querySelector('#destacadas')
+    destacadas.innerHTML += card
+
+    }
 }
 
-
 const torta = []
-const torta1 = new tortas("torta kakita", "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate")
-torta.push(torta1)
-const torta2 = new tortas("torta campeon", "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
-torta.push(torta2)
-const torta3 = new tortas("torta duff", "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
-torta.push(torta3)
-const torta4 = new tortas("torta dj", "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
-torta.push(torta4)
+const torta1 = new tortas("torta kakita", 4000, "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate")
+const torta2 = new tortas("torta campeon", 3000, "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
+const torta3 = new tortas("torta duff", 3000, "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
+const torta4 = new tortas("torta dj", 6000, "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
+torta.push(torta1, torta2, torta3, torta4)
 
+
+torta.forEach(e => {
+    e.cardproductos
+});
+
+
+/*
+const boton = document.getElementsByClassName('boton')
+
+boton.onclick = () => {
+    const productoselecionado = tortas[torta.selectedIndex]
+    console.log(productoselecionado)
+}
+
+*/
+
+
+
+/*
 console.log(torta)
 
 // BUSCADOR DE DISEÑO DE TORTAS
@@ -123,11 +151,11 @@ let preciofinal = calculandodescuento(totalcompra)
 
 
 alert('tu compra total es ' + preciofinal)
-*/
+
 
 // creando boton de compra en mi pagina
 
-const boton = document.getElementsByClassName('boton')
-boton.onclick =() => {
-    console.log('gracias perri')
-}
+const boton = document.createElement('button')
+boton.innerText = 'Agregame Bien Sabroso'
+document.boton.append(boton)
+*/
