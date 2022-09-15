@@ -1,5 +1,4 @@
-//EN LA WEB SE LE MUESTRA UNA SERIE DE FOTOS CON DISEÑO DE TORTAS CON SU RESPECTIVO NOMBRE, SE LE PREGUNTARA SI SU DISEÑO
-// ESTA DISPONIBLE
+//ZONA DE CLASES
 
 class tortas {
     constructor(nombre, precio, relleno, kilos, recubierto, opinion) {
@@ -9,6 +8,7 @@ class tortas {
         this.kilos = kilos
         this.recubierto = recubierto
     }
+    /*
     cardproductos() {
         const card = `
         <div class="card">
@@ -21,19 +21,58 @@ class tortas {
     destacadas.innerHTML += card
 
     }
+    */
 }
 
+
+
+//ZONA LLAMADOS A DOCUMENTOS
+const datosnombre = document.getElementById('datosnombre')
+const datoscelular = document.getElementById('datoscelular')
+const ingresardatos = document.getElementById('ingresardatos')
+const removedatos = document.querySelector('.container')
+const container = document.querySelector('.container')
+
+
+//ZONA DE FOTOS, PRECIOS,ETC DE LOS PRODUCTOS
+
 const torta = []
-const torta1 = new tortas("torta kakita", 4000, "relleno con dulce de leche y oreo", "4 kg", "ganacheada de chocolate")
-const torta2 = new tortas("torta campeon", 3000, "relleno con dulce de leche y fruta a eleccion", "3 kg", "masa dulce")
-const torta3 = new tortas("torta duff", 3000, "relleno con dulce de leche y frutilla", "3 kg", "masa dulce")
-const torta4 = new tortas("torta dj", 6000, "relleno con dulce de leche y chips de chocolate", "6 kg", "masa dulce")
-torta.push(torta1, torta2, torta3, torta4)
+const torta1 = new tortas("torta Planta vs Zombie", 12000, "relleno con dulce de leche y oreo", "4 kg", "ganacheada y cubierta con masa de azucar")
+const torta2 = new tortas("torta Piña", 6000, "relleno con dulce de leche y fruta a eleccion", "3 kg", "ganacheada y cubierta con masa de azucar")
+const torta3 = new tortas("torta Blanca Nieve", 15000, "relleno con dulce de leche y frutilla", "6 kg", "ganacheada y cubierta con masa de azucar")
+const torta4 = new tortas("torta Campeon", 15000, "relleno con dulce de leche y chips de chocolate", "6 kg", "ganacheada y cubierta con masa de azucar")
+const torta5 = new tortas("galletitas perros", 1500, "masa dulce cubierta con masa de ezucar", "6 kg", "#")
+const torta6 = new tortas("galletitas perros 2", 1500, "masa dulce cubierta con masa de ezucar", "6 kg", "#")
+const torta7 = new tortas("paletas de colores", 1000, "paleta relleno de oreo", "6 kg", "chocolate blanco y masa de azucar")
+const torta8 = new tortas("box de girasol", 1000, "rellna con dulce de leche ", "1 kg", "cubierta con masa de azucar")
+const torta9 = new tortas("box cupcackes", 3000, "bañado con crema ", "12u", "cubierta con masa de azucar")
+torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta9)
 
+//zona eventos
 
+ingresardatos.onclick = () => {
+    const usuario = {
+        nombre: datosnombre.value,
+        celular: datoscelular.value,
+    };
+    localStorage.setItem('usuariostorage', JSON.stringify(usuario))
+    removedatos.remove()
+    saludo(usuario)
+}
+
+// FUNCIONES
+
+function saludo(cliente) {
+    const saludar = document.createElement('h8')
+    saludar.innerText = ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
+    container.append(saludar)
+}
+
+/*
 torta.forEach(e => {
     e.cardproductos
 });
+*/
 
 
 /*

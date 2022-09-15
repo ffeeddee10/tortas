@@ -408,4 +408,21 @@
   width: 50%;
   display: inline-block;
   text-align: center;
+}
+
+.btn {
+  width: 100%;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.kakita {
+  display: grid;
+  position: fixed;
+  z-index: 10;
+  margin-top: -55px;
+  width: 100px;
+}
+.kakita-datos {
+  width: 100px;
 }/*# sourceMappingURL=main.css.map */
