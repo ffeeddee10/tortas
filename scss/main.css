@@ -429,4 +429,16 @@
 
 .saludousuario {
   color: aliceblue;
+}
+
+.carrito {
+  display: grid;
+  position: fixed;
+  right: -90%;
+  z-index: 10;
+  top: 150px;
+  width: 100%;
+}
+.carritoimg {
+  width: 100px;
 }/*# sourceMappingURL=main.css.map */
