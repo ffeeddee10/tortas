@@ -56,16 +56,17 @@ ingresardatos.onclick = () => {
         celular: datoscelular.value,
     };
     localStorage.setItem('usuariostorage', JSON.stringify(usuario))
-    removedatos.remove()
+    removedatos.remove() 
     saludo(usuario)
 }
+
 
 // FUNCIONES
 
 function saludo(cliente) {
     const saludar = document.createElement('h8')
     saludar.innerText = ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
-    container.append(saludar)
+    saludousuario.append(saludar)
 }
 
 /*
