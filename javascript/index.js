@@ -18,12 +18,14 @@ class tortas {
 
 // FUNCIONES
 
-//saludar
-function saludo(cliente) {
-    const saludar = document.createElement('h8')
-    saludar.innerText = ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
-    saludousuario.append(saludar)
+
+//saludar con toastify
+function saludotoastify(cliente) {
+    Toastify({
+        text : ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
+    }).showToast()
 }
+
 
 //busqueda mediante el id
 function guardarencarpeta(tortas) {
@@ -54,6 +56,8 @@ const ingresardatos = document.getElementById('ingresardatos')
 const removedatos = document.querySelector('.container')
 const container = document.querySelector('.container')
 const resultado = document.querySelector('resultado')
+const buscador = document.getElementById('buscador')
+const boton = document.getElementById('boton')
 
 
 //ZONA DE FOTOS, PRECIOS,ETC DE LOS PRODUCTOS
@@ -70,6 +74,46 @@ const torta8 = new tortas("008", "box de girasol", 1000, "rellna con dulce de le
 const torta9 = new tortas("009", "box cupcackes", 3000, "bañado con crema ", "12u", "cubierta con masa de azucar")
 torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta9)
 
+//BUSCADOR
+
+const encontrado = document.getElementById('encontrado')
+/*
+const filtrar = (e) => {
+e.preventDefault()
+    encontrado.innerHTML = ''
+    const texto = buscador.value.toLowerCase()
+    for (let productos of torta) {
+        let nombre = productos.nombre.toLowerCase()
+        if (nombre.indexOf(texto) !== -1)
+            encontrado.innerHTML += `
+        <li>${productos}</li>
+        `
+        localStorage.setItem('busquedausuario', JSON.stringify(productos))
+    }
+
+    if (encontrado.innerHTML = ''){
+        encontrado.innerHTML += `
+        <li> nooo </li>
+        `
+    }
+}
+boton.addEventListener('click', filtrar)
+*/
+/*
+boton.onclick = (e) => {
+e.preventDefault()
+    function busqueda (buscador){
+        const buscadores = torta.find(objeto=>objeto.nombre = busqueda)
+        buscador = buscadores ? 'si tenemos' : 'no tenemos'
+    }
+    const datos = {
+        nombretorta : busqueda.value
+    }
+    localStorage.setItem('busquedausuario', JSON.stringify(datos)),
+    console.log(busquedausuario)
+}
+*/
+
 //zona eventos
 
 ingresardatos.onclick = () => {
@@ -79,7 +123,8 @@ ingresardatos.onclick = () => {
     };
     localStorage.setItem('usuariostorage', JSON.stringify(usuario))
     removedatos.remove()
-    saludo(usuario)
+
+    saludotoastify(usuario)
 }
 
 //para cada uno de los productos torta hace esa funcion
@@ -88,15 +133,3 @@ torta.forEach(e => {
     e.agregarevento()
 });
 
-
-
-
-
-//guardar por las dudas
-/*
-contadorcarrito.innerhtml = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)*/
-/*
-//contador
-const contadorcarrito = document.querySelector('contador')
-contadorcarrito.innerhtml = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
-*/
