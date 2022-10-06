@@ -22,7 +22,7 @@ class tortas {
 //saludar con toastify
 function saludotoastify(cliente) {
     Toastify({
-        text : ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
+        text: ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
     }).showToast()
 }
 
@@ -115,7 +115,7 @@ e.preventDefault()
 */
 
 //zona eventos
-
+/*
 ingresardatos.onclick = () => {
     const usuario = {
         nombre: datosnombre.value,
@@ -126,10 +126,25 @@ ingresardatos.onclick = () => {
 
     saludotoastify(usuario)
 }
-
+*/
 //para cada uno de los productos torta hace esa funcion
-
+/*
 torta.forEach(e => {
     e.agregarevento()
 });
+*/
+
+const emoji = document.getElementById('emoji')
+
+fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then(info => {
+        const chuck = info.icon_url
+        console.log(chuck)
+        chuck.forEach(chucknorris => {
+            const li = document.createElement('li')
+            li.innerHTML = `<img src=${chucknorris.icon_url}>`
+            lista.append(li)
+        });
+    })
 
