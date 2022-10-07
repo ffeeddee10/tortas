@@ -76,46 +76,9 @@ torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta
 
 //BUSCADOR
 
-const encontrado = document.getElementById('encontrado')
-/*
-const filtrar = (e) => {
-e.preventDefault()
-    encontrado.innerHTML = ''
-    const texto = buscador.value.toLowerCase()
-    for (let productos of torta) {
-        let nombre = productos.nombre.toLowerCase()
-        if (nombre.indexOf(texto) !== -1)
-            encontrado.innerHTML += `
-        <li>${productos}</li>
-        `
-        localStorage.setItem('busquedausuario', JSON.stringify(productos))
-    }
-
-    if (encontrado.innerHTML = ''){
-        encontrado.innerHTML += `
-        <li> nooo </li>
-        `
-    }
-}
-boton.addEventListener('click', filtrar)
-*/
-/*
-boton.onclick = (e) => {
-e.preventDefault()
-    function busqueda (buscador){
-        const buscadores = torta.find(objeto=>objeto.nombre = busqueda)
-        buscador = buscadores ? 'si tenemos' : 'no tenemos'
-    }
-    const datos = {
-        nombretorta : busqueda.value
-    }
-    localStorage.setItem('busquedausuario', JSON.stringify(datos)),
-    console.log(busquedausuario)
-}
-*/
 
 //zona eventos
-/*
+
 ingresardatos.onclick = () => {
     const usuario = {
         nombre: datosnombre.value,
@@ -126,25 +89,16 @@ ingresardatos.onclick = () => {
 
     saludotoastify(usuario)
 }
-*/
+
 //para cada uno de los productos torta hace esa funcion
-/*
+
 torta.forEach(e => {
     e.agregarevento()
 });
-*/
 
-const emoji = document.getElementById('emoji')
 
-fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then(info => {
-        const chuck = info.icon_url
-        console.log(chuck)
-        chuck.forEach(chucknorris => {
-            const li = document.createElement('li')
-            li.innerHTML = `<img src=${chucknorris.icon_url}>`
-            lista.append(li)
-        });
-    })
+
+
+
+
 
