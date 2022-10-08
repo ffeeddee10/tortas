@@ -70,3 +70,24 @@ const filtrar = (e) => {
 boton.addEventListener('click', filtrar)
 
 const encontrado = document.getElementById('encontrado')
+
+
+/*
+datoUsuarioStorage.forEach(e => {
+    let probando = document.getElementById("probando")
+    let div = document.createElement("div")
+    div.innerHTML = e.name
+    probando.appendchild(div)
+}
+)
+*/
+/*
+let nombre = ''
+
+datoUsuarioStorage.forEach((dato) => {
+    if (dato.nombre==='nombre'){
+        nombre = dato.nombre
+        
+        console.log('nombre',nombre)
+    }
+})*/

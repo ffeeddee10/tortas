@@ -1,5 +1,6 @@
 //ZONA DE CLASES
 
+
 class tortas {
     constructor(id, nombre, precio, relleno, kilos, recubierto, opinion) {
         this.id = id
@@ -10,22 +11,33 @@ class tortas {
         this.recubierto = recubierto
     }
     agregarevento() {
+
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
+
+        //guarrdando en localstorage
+        localStorage.setItem('productoEnStorage', JSON.stringify(encarrito))
+        const info = JSON.parse(localStorage.getItem(productoEnStorage))
+        console.log(info)
     }
 }
 
 // FUNCIONES
 
-
-//saludar con toastify
+//saludar con toastify cliente
 function saludotoastify(cliente) {
     Toastify({
         text: ` Hola ${cliente.nombre} elije tus productos y te cotizamos`
     }).showToast()
 }
 
+//toastify en guardado
+function guardadoToastify(guardado) {
+    Toastify({
+        text: ` Producto guardado`
+    }).showToast()
+}
 
 //busqueda mediante el id
 function guardarencarpeta(tortas) {
@@ -41,8 +53,8 @@ function guardarencarpeta(tortas) {
             { ...encarrito, cantidad: encarrito.cantidad + 1 }
         ]
     }
-    //guardando en un console.log
-    console.log(carrito)
+
+
 }
 
 
@@ -59,7 +71,6 @@ const resultado = document.querySelector('resultado')
 const buscador = document.getElementById('buscador')
 const boton = document.getElementById('boton')
 
-
 //ZONA DE FOTOS, PRECIOS,ETC DE LOS PRODUCTOS
 
 const torta = []
@@ -74,10 +85,10 @@ const torta8 = new tortas("008", "box de girasol", 1000, "rellna con dulce de le
 const torta9 = new tortas("009", "box cupcackes", 3000, "bañado con crema ", "12u", "cubierta con masa de azucar")
 torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta9)
 
-//BUSCADOR
-
 
 //zona eventos
+
+//datos del cliente
 
 ingresardatos.onclick = () => {
     const usuario = {
@@ -88,7 +99,28 @@ ingresardatos.onclick = () => {
     removedatos.remove()
 
     saludotoastify(usuario)
+
 }
+
+//guardando datos de los productos elejidas
+const remove = document.getElementById('remove')
+const hola = document.getElementById('hola')
+
+hola.addEventListener('click', guardadoToastify())
+remove.remove()
+
+/*
+localStorage.setItem('carpetastorage', JSON.stringify(guardando))
+guardadoToastify()
+*/
+
+
+// utilizando informacion del localstorage
+
+const datoUsuarioStorage = JSON.parse(localStorage.getItem('usuariostorage'))
+console.log(datoUsuarioStorage)
+
+console.log(datoUsuarioStorage.nombre, datoUsuarioStorage.celular)
 
 //para cada uno de los productos torta hace esa funcion
 

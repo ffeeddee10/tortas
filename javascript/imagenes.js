@@ -8,7 +8,6 @@ fetch('./tortas.json')
                              `
             const cards = document.getElementById('creacion');
             cards.innerHTML += informacion
-            console.log(informacion)
         });
 
     })
