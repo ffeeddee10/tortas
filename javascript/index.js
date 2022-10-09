@@ -14,16 +14,21 @@ class tortas {
 
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
-        agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
-
+        agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid)
+        
+        
+        )
         //guarrdando en localstorage
+        /*
         localStorage.setItem('productoEnStorage', JSON.stringify(encarrito))
         const info = JSON.parse(localStorage.getItem(productoEnStorage))
-        console.log(info)
+        console.log(info)*/
+        
     }
 }
 
 // FUNCIONES
+
 
 //saludar con toastify cliente
 function saludotoastify(cliente) {
@@ -39,23 +44,7 @@ function guardadoToastify(guardado) {
     }).showToast()
 }
 
-//busqueda mediante el id
-function guardarencarpeta(tortas) {
-    const encarrito = carrito.find(prod => prod.id == tortas.id)
 
-    //creando carrito con las cantidad para que no sean muchos objetos con el mismo dato
-    if (!encarrito) {
-        carrito.push({ ...tortas, cantidad: 1 }) // crea un item de cantidad y le suma 1
-    } else {
-        const carritofiltro = carrito.filter(prod => prod.id != tortas.id)
-        carrito = [
-            ...carritofiltro,
-            { ...encarrito, cantidad: encarrito.cantidad + 1 }
-        ]
-    }
-
-
-}
 
 
 //varios
@@ -70,6 +59,7 @@ const container = document.querySelector('.container')
 const resultado = document.querySelector('resultado')
 const buscador = document.getElementById('buscador')
 const boton = document.getElementById('boton')
+
 
 //ZONA DE FOTOS, PRECIOS,ETC DE LOS PRODUCTOS
 
@@ -120,17 +110,33 @@ guardadoToastify()
 const datoUsuarioStorage = JSON.parse(localStorage.getItem('usuariostorage'))
 console.log(datoUsuarioStorage)
 
-console.log(datoUsuarioStorage.nombre, datoUsuarioStorage.celular)
+console.log(datoUsuarioStorage.nombre)
 
 //para cada uno de los productos torta hace esa funcion
 
 torta.forEach(e => {
     e.agregarevento()
-});
+})
 
 
+//busqueda mediante el id
+function guardarencarpeta(tortas) {
+    const encarrito = carrito.find(prod => prod.id == tortas.id)
 
+    //creando carrito con las cantidad para que no sean muchos objetos con el mismo dato
+    if (!encarrito) {
+        carrito.push({ ...tortas, cantidad: 1 }) // crea un item de cantidad y le suma 1
+    } else {
+        const carritofiltro = carrito.filter(prod => prod.id != tortas.id)
+        carrito = [
+            ...carritofiltro,
+            { ...encarrito, cantidad: encarrito.cantidad + 1 }
+        ]
+    }
 
+}
 
+guardarencarpeta()
+console.log(carrito)
 
 
