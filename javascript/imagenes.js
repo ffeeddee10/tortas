@@ -23,8 +23,9 @@ class tortas {
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
     }
-
 }
+
+
 //informacion e imagenes de las tortas
 
 const torta = []
@@ -85,11 +86,16 @@ function guardarencarpeta(tortas) {
     }
 
     //guardando en localstorage
-    const guardar = (hola, carrito) => {localStorage.setItem("hola",carrito)}
-    guardar("lista",JSON.stringify(carrito))
+    const guardar = (hola, carrito) => { localStorage.setItem("hola", carrito) }
+    guardar("lista", JSON.stringify(carrito))
     const almacenar = JSON.parse(localStorage.getItem("hola"))
     console.log(almacenar)
+    //utlizando el localstorage
+
+    const probar=document.getElementById("probar")
+    const cards = `
+    <p>${this.nombre}</p>
+    ` 
+    probar.innerHTML  += cards
 }
-
-
 
