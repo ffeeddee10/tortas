@@ -84,17 +84,15 @@ function guardarencarpeta(tortas) {
             { ...encarrito, cantidad: encarrito.cantidad + 1 }
         ]
     }
-
+    
     //guardando en localstorage
-    const guardar = (hola, carrito) => { localStorage.setItem("hola", carrito) }
-    guardar("lista", JSON.stringify(carrito))
-    const almacenar = JSON.parse(localStorage.getItem("hola"))
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    const almacenar = JSON.parse(localStorage.getItem("carrito"))
     console.log(almacenar)
     //utlizando el localstorage
-
     const probar=document.getElementById("probar")
     const cards = `
-    <p>${this.nombre}</p>
+    <p>${almacenar.nombre}</p>
     ` 
     probar.innerHTML  += cards
 }
