@@ -85,25 +85,30 @@ function guardarencarpeta(tortas) {
         ]
     }
     //guardando en localstorage
-    function bringInfo() {
-        let almacenar = localStorage.setItem("carrito", JSON.stringify(carrito))
-        return almacenar
-    }
-    function usandojson() {
-        let almacenarjson = JSON.parse(localStorage.getItem("carrito"))
-        console.log(almacenarjson)
+    function carritoDeCompra() {
+        const almacenar = localStorage.setItem("carrito", JSON.stringify(carrito))
+        const almacenarjson = JSON.parse(localStorage.getItem("carrito"))
         //utlizando el localstorage
-
-        const probar = document.getElementById("probar")
+        const changuito = document.getElementById("changuito")
         const cards = `
-                    <p>${almacenarjson[0].nombre}</p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                        <img src="${almacenarjson[0].image}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${almacenarjson[0].nombre}</h5>
+                        <p class="card-text">${almacenarjson[0].id}</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
                     `
-        probar.innerHTML += cards
-        console.log(cards)
-        return almacenarjson
+        changuito.innerHTML += cards
     }
-    bringInfo()
-    usandojson()
+    carritoDeCompra()
 }
 
 
