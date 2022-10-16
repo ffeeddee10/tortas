@@ -72,7 +72,7 @@ torta.forEach(e => {
 
 //busqueda mediante el id
 function guardarencarpeta(tortas) {
-    const carrito = []
+    let carrito = []
     const encarrito = carrito.find(prod => prod.id == tortas.id)
     //creando carrito con las cantidad para que no sean muchos objetos con el mismo dato
     if (!encarrito) {
@@ -85,48 +85,51 @@ function guardarencarpeta(tortas) {
         ]
     }
     //guardando en localstorage
-    async function bringInfo() {
-        const almacenar = await localStorage.setItem("carrito", JSON.stringify(carrito))
-        const almacenarjson = await JSON.parse(localStorage.getItem("carrito"))
-        console.log(almacenarjson)
-
+    function bringInfo() {
+        let almacenar = localStorage.setItem("carrito", JSON.stringify(carrito))
+        return almacenar
     }
-    function usandojson(){
+    function usandojson() {
+        let almacenarjson = JSON.parse(localStorage.getItem("carrito"))
+        console.log(almacenarjson)
         //utlizando el localstorage
+
         const probar = document.getElementById("probar")
         const cards = `
-                    <p>${almacenarjson.id}</p>
+                    <p>${almacenarjson[0].nombre}</p>
                     `
         probar.innerHTML += cards
+        console.log(cards)
+        return almacenarjson
     }
     bringInfo()
     usandojson()
 }
 
 
-    /*
-        //guardando en localstorage
+/*
+    //guardando en localstorage
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    const almacenar = JSON.parse(localStorage.getItem("carrito"))
+    console.log(almacenar)*/
+/*
+function guardoCarrito() {
+    if ("carrito".id > 0) {
         localStorage.setItem("carrito", JSON.stringify(carrito))
-        const almacenar = JSON.parse(localStorage.getItem("carrito"))
-        console.log(almacenar)*/
-    /*
-    function guardoCarrito() {
-        if ("carrito".id > 0) {
-            localStorage.setItem("carrito", JSON.stringify(carrito))
-            console.log("nose")
-        }
-        else { (miCarrito = JSON.parse(localStorage.getItem("carrito"))) 
+        console.log("nose")
+    }
+    else { (miCarrito = JSON.parse(localStorage.getItem("carrito"))) 
+    console.log(miCarrito.id)
+}
+}*/
+/*
+function recuperoCarrito() {
+    let miCarrito
+    if (miCarrito = JSON.parse(localStorage.getItem("carrito"))) {
         console.log(miCarrito.id)
     }
+    else {localStorage.setItem("carrito", JSON.stringify(carrito))}
 }*/
-    /*
-    function recuperoCarrito() {
-        let miCarrito
-        if (miCarrito = JSON.parse(localStorage.getItem("carrito"))) {
-            console.log(miCarrito.id)
-        }
-        else {localStorage.setItem("carrito", JSON.stringify(carrito))}
-    }*/
 
 
 /*
