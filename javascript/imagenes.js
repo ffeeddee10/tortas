@@ -1,4 +1,4 @@
-
+let carrito = []
 class tortas {
     constructor(id, nombre, image, kilos) {
         this.id = id
@@ -72,75 +72,47 @@ torta.forEach(e => {
 
 //busqueda mediante el id
 function guardarencarpeta(tortas) {
-    let carrito = []
     const encarrito = carrito.find(prod => prod.id == tortas.id)
     //creando carrito con las cantidad para que no sean muchos objetos con el mismo dato
     if (!encarrito) {
-        carrito.push({ ...tortas, cantidad: 1 }) // crea un item de cantidad y le suma 1
+        carrito.push({ ...tortas, cantidad: 1 })
     } else {
-        const carritofiltro = carrito.filter(prod => prod.id != tortas.id)
+        const carritofiltrado = carrito.filter(prod => prod.id != tortas.id)
         carrito = [
-            ...carritofiltro,
-            { ...encarrito, cantidad: encarrito.cantidad + 1 }
+            ...carritofiltrado,
+            {...encarrito, cantidad: encarrito.cantidad + 1}
         ]
     }
+console.log(carrito)
+
     //guardando en localstorage
     function carritoDeCompra() {
-        const almacenar = localStorage.setItem("carrito", JSON.stringify(carrito))
-        const almacenarjson = JSON.parse(localStorage.getItem("carrito"))
-        //utlizando el localstorage
+        localStorage.setItem("usuariostorage", JSON.stringify(carrito))
+    }
+    function creandocard() {
+        const almacenarjson = JSON.parse(localStorage.getItem("usuariostorage"))
         const changuito = document.getElementById("changuito")
         const cards = `
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                        <img src="${almacenarjson[0].image}" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${almacenarjson[0].nombre}</h5>
-                        <p class="card-text">${almacenarjson[0].id}</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                            <img src="${almacenarjson[0].image}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${almacenarjson[0].nombre}</h5>
+                            <p class="card-text">${almacenarjson[0].id}</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-                    `
+                        `
         changuito.innerHTML += cards
     }
     carritoDeCompra()
+    creandocard()
+ return localStorage
 }
 
 
-/*
-    //guardando en localstorage
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    const almacenar = JSON.parse(localStorage.getItem("carrito"))
-    console.log(almacenar)*/
-/*
-function guardoCarrito() {
-    if ("carrito".id > 0) {
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-        console.log("nose")
-    }
-    else { (miCarrito = JSON.parse(localStorage.getItem("carrito"))) 
-    console.log(miCarrito.id)
-}
-}*/
-/*
-function recuperoCarrito() {
-    let miCarrito
-    if (miCarrito = JSON.parse(localStorage.getItem("carrito"))) {
-        console.log(miCarrito.id)
-    }
-    else {localStorage.setItem("carrito", JSON.stringify(carrito))}
-}*/
-
-
-/*
-//utlizando el localstorage
-const probar=document.getElementById("probar")
-const cards = `
-<p>${almacenar}</p>
-` 
-probar.innerHTML  += cards*/

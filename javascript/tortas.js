@@ -1,5 +1,4 @@
 const carrito = []
-const torta = []
 
 class tortas {
     constructor(id, nombre, image, kilos) {
@@ -9,7 +8,7 @@ class tortas {
         this.kilos = kilos
 
     }
-    desplegarproductos() {
+   /* desplegarproductos() {
         const card = `
         <a href=${this.image} target="_blank"><img src=${this.image}
                     alt="..." class="promo_item promo_item_1 imagenes"></a>
@@ -19,7 +18,7 @@ class tortas {
         `
         const creaciontorta = document.getElementById('creaciontorta')
         creaciontorta.innerHTML += card
-    }
+    }*/
     agregarevento() {
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
@@ -28,22 +27,20 @@ class tortas {
 }
 
 
-//informacion e imagenes de las tortas
-
-
-
+const torta = []
 
 
 
 //para cada elemento has esto
 
-
+/*
 torta.forEach(e => {
     e.desplegarproductos()
-})
+})*/
 torta.forEach(e => {
     e.agregarevento()
 })
+
 
 
 //busqueda mediante el id
@@ -62,14 +59,13 @@ function guardarencarpeta(tortas) {
     }
     //guardando en localstorage
     function carritoDeCompra() {
-        localStorage.setItem("carrito", JSON.stringify(carrito))
+        localStorage.setItem("usuariostorage", JSON.stringify(carrito))
     }
     carritoDeCompra()
     return localStorage
 }
-
-function creandocard (){
-    const almacenarjson = JSON.parse(localStorage.getItem("carrito"))
+function creandocard() {
+    const almacenarjson = JSON.parse(localStorage.getItem("usuariostorage"))
     const changuito = document.getElementById("changuito")
     const cards = `
         <div class="card mb-3" style="max-width: 540px;">
@@ -89,4 +85,11 @@ function creandocard (){
                     `
     changuito.innerHTML += cards
 }
-    creandocard()
+creandocard()
+
+
+
+
+
+
+
