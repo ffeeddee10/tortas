@@ -1,3 +1,4 @@
+
 let carrito = []
 class tortas {
     constructor(id, nombre, image, kilos) {
@@ -22,8 +23,10 @@ class tortas {
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
+
     }
 }
+
 
 
 //informacion e imagenes de las tortas
@@ -80,39 +83,40 @@ function guardarencarpeta(tortas) {
         const carritofiltrado = carrito.filter(prod => prod.id != tortas.id)
         carrito = [
             ...carritofiltrado,
-            {...encarrito, cantidad: encarrito.cantidad + 1}
+            { ...encarrito, cantidad: encarrito.cantidad + 1 }
         ]
+        return
     }
-console.log(carrito)
 
-    //guardando en localstorage
-    function carritoDeCompra() {
+    //guardando 
+    function save() {
         localStorage.setItem("usuariostorage", JSON.stringify(carrito))
     }
-    function creandocard() {
-        const almacenarjson = JSON.parse(localStorage.getItem("usuariostorage"))
-        const changuito = document.getElementById("changuito")
-        const cards = `
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                            <img src="${almacenarjson[0].image}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">${almacenarjson[0].nombre}</h5>
-                            <p class="card-text">${almacenarjson[0].id}</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                        `
-        changuito.innerHTML += cards
-    }
-    carritoDeCompra()
-    creandocard()
- return localStorage
+    save()
+    return localStorage
 }
 
 
+
+
+/*
+function save() {
+    //obtener datos del cuadro de entrada
+    var new_data = ' ' + document.getElementById('changuito')
+    //si no hay nada guardado al principio, guarde una matriz vacía
+    if (localStorage.getItem('carrito') == null) {
+        localStorage.setItem('carrito', '[]');
+    }
+    //obtener datos antiguos y pegarlos a los nuevos datos
+    var old_data = JSON.parse(localStorage.getItem('carrito'));
+    old_data.push(new_data);
+    //guarde los datos antiguos + nuevos en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(old_data));
+}
+function view() {
+    if (localStorage.getItem('carrito') != null) {
+        document.getElementById('changuito').innerHTML = JSON.parse(localStorage.getItem('carrito'))
+    }
+}
+save()
+view()*/

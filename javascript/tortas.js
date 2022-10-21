@@ -1,3 +1,4 @@
+
 const carrito = []
 
 class tortas {
@@ -60,32 +61,19 @@ function guardarencarpeta(tortas) {
     //guardando en localstorage
     function carritoDeCompra() {
         localStorage.setItem("usuariostorage", JSON.stringify(carrito))
+        if (localStorage.getItem('usuariostorage') == null) {
+            localStorage.setItem('usuariostorage', '[]');
+        }
+    }
+    function creandocard() {
+        if (localStorage.getItem('carrito') != null) {
+            document.getElementById('changuito').innerHTML = JSON.parse(localStorage.getItem("usuariostorage"))
+        }
     }
     carritoDeCompra()
-    return localStorage
+    creandocard()
+    return
 }
-function creandocard() {
-    const almacenarjson = JSON.parse(localStorage.getItem("usuariostorage"))
-    const changuito = document.getElementById("changuito")
-    const cards = `
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                        <img src="${almacenarjson[0].image}" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${almacenarjson[0].nombre}</h5>
-                        <p class="card-text">${almacenarjson[0].id}</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-                    `
-    changuito.innerHTML += cards
-}
-creandocard()
 
 
 
