@@ -1,5 +1,6 @@
 
 let carrito = []
+
 class tortas {
     constructor(id, nombre, image, kilos) {
         this.id = id
@@ -26,7 +27,6 @@ class tortas {
 
     }
 }
-
 
 
 //informacion e imagenes de las tortas
@@ -93,7 +93,7 @@ function guardarencarpeta(tortas) {
         localStorage.setItem("usuariostorage", JSON.stringify(carrito))
     }
     save()
-    return localStorage
+    return
 }
 
 
