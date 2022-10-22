@@ -28,7 +28,6 @@ class tortas {
     }
 }
 
-
 //informacion e imagenes de las tortas
 
 const torta = []
@@ -60,11 +59,7 @@ let torta24 = new tortas("024", "torta Planta vs Zombie", "../image/tortas/torta
 torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta9, torta10, torta11, torta12, torta13, torta14, torta14, torta15, torta16, torta17, torta18, torta19, torta20, torta21, torta22, torta23, torta24)
 
 
-
-
 //para cada elemento has esto
-
-
 torta.forEach(e => {
     e.desplegarproductos()
 })

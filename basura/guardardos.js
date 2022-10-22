@@ -640,3 +640,4 @@ let datos = JSON.parse(localStorage.getItem("usuariostorage"))
 for (const prov of datos) {
     view(prov)
 }
+
