@@ -18,23 +18,25 @@ function viewcarrito() {
                         <div class="card-body">
                             <h5 class="card-title">${datos.nombre}</h5>
                             <p class="card-text">${datos.kilos}</p>
-                            <button onclick = "eliminarproducto(${datos.id})" type="button" class="btn btn-outline-danger">Borrar</button>
                         </div>
                     </div>
                 </div>
+                <button type="button" class="delete btn btn-outline-danger">Borrar</button>
             </div>
                         `
             changuito.append(div)
-            /*changuito.querySelector(".delete").addEventListener('click', removeItemChanguito)*/
+            div.querySelector(".delete").addEventListener('click', removeItemChanguito) // selector padre apra borrar todo el contenido que se encuentra dentro de el
         });
     }
+    save()
 }
 viewcarrito()
-/*
+
+//funcion remover producto realcioando con boton eliminar
 function removeItemChanguito(e) {
     const buttonDelete = e.target
-    const div = buttonDelete.closest("div")
-    const title = div.querySelector('.title').textContent;
+    const div = buttonDelete.closest("div") // elimina el contenido
+    const title = div.querySelector('.delete').div; //selector del boton padre para eliminar
     div.remove()
     for (let i = 0; i < carrito.length; i++) {
 
@@ -42,12 +44,21 @@ function removeItemChanguito(e) {
             carrito.splice(i, 1)
         }
     }
-}*/
+}
+//funcion sabe global
+function save() {
+    localStorage.setItem("usuariostorage", JSON.stringify(carrito))
+}
+//funcion refrescador de pagina
+window.onload = function () {
+    const storage = JSON.parse(localStorage.getItem('usuariostorage'));
+    if (storage) {
+        carrito = storage;
+        viewcarrito()
+    }
+}
 
-
-
-
-//boton vaciar productos
+//boton vaciar todos lso productos
 function vaciarproductos() {
     const vaciar = document.getElementById("vaciar")
     const div = document.createElement('div')

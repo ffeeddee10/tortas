@@ -1,6 +1,6 @@
 
 let carrito = []
-
+//Organizacion constructor
 class tortas {
     constructor(id, nombre, image, kilos) {
         this.id = id
@@ -18,9 +18,10 @@ class tortas {
 				</div>
         `
         const creaciontorta = document.getElementById('creaciontorta')
-        creaciontorta.innerHTML += card
+        creaciontorta.innerHTML += card // insertar los card en id seleccionado
     }
     agregarevento() {
+        //selecionar los id de los productos
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
@@ -57,7 +58,6 @@ let torta23 = new tortas("023", "torta Tik Tok", "../image/tortas/torta_23.jpg",
 let torta24 = new tortas("024", "torta Frutillita", "../image/tortas/torta_24.jpg", "6kg")
 torta.push(torta1, torta2, torta3, torta4, torta5, torta6, torta7, torta8, torta9, torta10, torta11, torta12, torta13, torta14, torta14, torta15, torta16, torta17, torta18, torta19, torta20, torta21, torta22, torta23, torta24)
 
-
 //para cada elemento has esto
 torta.forEach(e => {
     e.desplegarproductos()
@@ -65,7 +65,6 @@ torta.forEach(e => {
 torta.forEach(e => {
     e.agregarevento()
 })
-
 
 //busqueda mediante el id
 function guardarencarpeta(tortas) {
@@ -81,36 +80,10 @@ function guardarencarpeta(tortas) {
         ]
         return
     }
-
-    //guardando 
+    //funcion guardar
     function save() {
         localStorage.setItem("usuariostorage", JSON.stringify(carrito))
     }
     save()
     return
 }
-
-
-
-
-/*
-function save() {
-    //obtener datos del cuadro de entrada
-    var new_data = ' ' + document.getElementById('changuito')
-    //si no hay nada guardado al principio, guarde una matriz vacía
-    if (localStorage.getItem('carrito') == null) {
-        localStorage.setItem('carrito', '[]');
-    }
-    //obtener datos antiguos y pegarlos a los nuevos datos
-    var old_data = JSON.parse(localStorage.getItem('carrito'));
-    old_data.push(new_data);
-    //guarde los datos antiguos + nuevos en el almacenamiento local
-    localStorage.setItem('carrito', JSON.stringify(old_data));
-}
-function view() {
-    if (localStorage.getItem('carrito') != null) {
-        document.getElementById('changuito').innerHTML = JSON.parse(localStorage.getItem('carrito'))
-    }
-}
-save()
-view()*/
