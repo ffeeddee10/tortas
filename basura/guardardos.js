@@ -687,3 +687,31 @@ function viewcarritoactualizado() {
 
     });
 }*/
+
+
+// borrar itmep 
+//funcion refrescador de pagina
+window.onload = function () {
+    const storage = JSON.parse(localStorage.getItem('usuariostorage'));
+    if (storage) {
+        carrito = storage;
+    }
+}
+//funcion remover producto realcioando con boton eliminar
+function removeItemChanguito(e) {
+    const buttonDelete = e.target
+    const div = buttonDelete.closest("div")
+    const title = div.querySelector('.delete').div;
+    for (let i = 0; i < carrito.length; i++) {
+        if (carrito[i].title.trim() === title.trim()) {
+            carrito.splice(i, 1)
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', e => {
+    if (localStorage.getItem('usuariostorage')) {
+        carrito = JSON.parse(localStorage.getItem('usuariostorage'))
+        viewcarrito()
+    }
+});

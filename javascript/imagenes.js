@@ -18,13 +18,15 @@ class tortas {
 				</div>
         `
         const creaciontorta = document.getElementById('creaciontorta')
-        creaciontorta.innerHTML += card // insertar los card en id seleccionado
+        // insertar los card en id seleccionado
+        creaciontorta.innerHTML += card 
     }
     agregarevento() {
         //selecionar los id de los productos
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
+        
     }
 }
 
@@ -80,10 +82,18 @@ function guardarencarpeta(tortas) {
         ]
         return
     }
+    //llamo a funcion libreria guardar
+    guardadotoastify()
     //funcion guardar
     function save() {
         localStorage.setItem("usuariostorage", JSON.stringify(carrito))
     }
     save()
     return
+}
+//funcion saludo con libreria
+function guardadotoastify() {
+    Toastify({
+        text: ` tu producto se agrego correctamente`
+    }).showToast()
 }

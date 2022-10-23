@@ -25,36 +25,39 @@ function viewcarrito() {
             </div>
                         `
             changuito.append(div)
-            div.querySelector(".delete").addEventListener('click', removeItemChanguito) // selector padre apra borrar todo el contenido que se encuentra dentro de el
+            //llamo al boton delete de los cards
+            div.querySelector(".delete").addEventListener('click', removeItemChanguito)
         });
     }
-    save()
 }
 viewcarrito()
 
-//funcion remover producto realcioando con boton eliminar
-function removeItemChanguito(e) {
-    const buttonDelete = e.target
-    const div = buttonDelete.closest("div") // elimina el contenido
-    const title = div.querySelector('.delete').div; //selector del boton padre para eliminar
-    div.remove()
-    for (let i = 0; i < carrito.length; i++) {
 
-        if (carrito[i].title.trim() === title.trim()) {
-            carrito.splice(i, 1)
-        }
-    }
-}
-//funcion sabe global
+//funcion guardar
 function save() {
     localStorage.setItem("usuariostorage", JSON.stringify(carrito))
 }
+
 //funcion refrescador de pagina
 window.onload = function () {
     const storage = JSON.parse(localStorage.getItem('usuariostorage'));
     if (storage) {
         carrito = storage;
-        viewcarrito()
+    }
+}
+//funcion remover producto realcioando con boton eliminar
+function removeItemChanguito(e) {
+    const buttonDelete = e.target
+    const div = buttonDelete.closest("div")
+    //utilizo el boton delete para remover el producto
+    const title = div.querySelector('.delete').div; 
+    //libreria toastify
+    borrartoastify()
+    div.remove()
+    for (let i = 0; i < carrito.length; i++) {  
+        if (carrito[i].title.trim() === title.trim()) {
+            carrito.splice(i, 1)
+        }
     }
 }
 
@@ -68,8 +71,17 @@ function vaciarproductos() {
     vaciar.append(div)
     vaciar.addEventListener('click', () => {
         localStorage.removeItem('usuariostorage')
-        location.reload() //refresca la pagina al borrar todos los productos
-        viewcarrito()
+        //al vaciar los productos refresco la pagina
+        location.reload()
+
     })
 }
 vaciarproductos()
+
+//funcion vaciar con libreria
+function borrartoastify() {
+    Toastify({
+        text: `eliminamos tu producto`
+    }).showToast()
+}
+

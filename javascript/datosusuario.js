@@ -1,6 +1,5 @@
 
 //saludar con toastify a cliente
-
 function saludotoastify(cliente) {
     Toastify({
         text: ` Hola ${cliente.nombre} elije tus productos y te cotizamos`    
@@ -8,7 +7,6 @@ function saludotoastify(cliente) {
 }
 
 //LLAMADOS A DOCUMENTOS
-
 const datosnombre = document.getElementById('datosnombre')
 const datoscelular = document.getElementById('datoscelular')
 const ingresardatos = document.getElementById('ingresardatos')
@@ -22,9 +20,13 @@ ingresardatos.onclick = () => {
         celular: datoscelular.value,
     };
     localStorage.setItem('usuario', JSON.stringify(usuario))
-    removedatos.remove()  
+    removedatos.remove()
     saludotoastify(usuario) 
 }
 
 // utilizando informacion del localstorage
 const datoUsuarioStorage = JSON.parse(localStorage.getItem('usuario'))
+
+
+
+
