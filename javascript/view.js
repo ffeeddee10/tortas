@@ -81,7 +81,15 @@ vaciarproductos()
 //funcion vaciar con libreria
 function borrartoastify() {
     Toastify({
-        text: `eliminamos tu producto`
+        text: `eliminamos tu producto`,
+        duration: 3000,
+        newWindow: true,
+        gravity: "bottom", 
+        position: "left", 
+        stopOnFocus: true, 
+        style: {
+            background: "linear-gradient(to right, gray, black)",
+        },
     }).showToast()
 }
 

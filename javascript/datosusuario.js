@@ -2,7 +2,15 @@
 //saludar con toastify a cliente
 function saludotoastify(cliente) {
     Toastify({
-        text: ` Hola ${cliente.nombre} elije tus productos y te cotizamos`    
+        text: ` Hola ${cliente.nombre} elije tus productos y te cotizamos`,
+        duration: 3000,
+        newWindow: true,
+        gravity: "top", 
+        position: "center",
+        stopOnFocus: true, 
+        style: {
+            background: "linear-gradient(to right, black, black)",
+        },  
     }).showToast()
 }
 

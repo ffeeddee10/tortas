@@ -94,6 +94,14 @@ function guardarencarpeta(tortas) {
 //funcion saludo con libreria
 function guardadotoastify() {
     Toastify({
-        text: ` tu producto se agrego correctamente`
+        text: ` tu producto se agrego correctamente`,
+        duration: 3000,
+        newWindow: true,
+        gravity: "bottom", 
+        position: "left", 
+        stopOnFocus: true, 
+        style: {
+            background: "linear-gradient(to right, gray, black)",
+        },
     }).showToast()
 }
