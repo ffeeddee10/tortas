@@ -1,0 +1,67 @@
+[
+    {
+        "id": "001",
+        "name": "box 1",
+        "image": "../image/box/box_1.jpg"
+    },
+    {
+        "id": "002",
+        "name": "box 2",
+        "image": "../image/box/box_2.jpg"
+    },
+    {
+        "id": "003",
+        "name": "box 3",
+        "image": "../image/box/box_3.jpg"
+    },
+    {
+        "id": "004",
+        "name": "box 4",
+        "image": "../image/box/box_4.jpg"
+    },
+    {
+        "id": "005",
+        "name": "box 5",
+        "image": "../image/box/box_5.jpg"
+    },
+    {
+        "id": "006",
+        "name": "box 6",
+        "image": "../image/box/box_6.jpg"
+    },
+    {
+        "id": "007",
+        "name": "box 7",
+        "image": "../image/box/box_7.jpg"
+    },
+    {
+        "id": "008",
+        "name": "box 8",
+        "image": "../image/box/box_8.jpg"
+    },
+    {
+        "id": "009",
+        "name": "box 9",
+        "image": "../image/box/box_9.jpg"
+    },
+    {
+        "id": "010",
+        "name": "box 10",
+        "image": "../image/box/box_10.jpg"
+    },
+    {
+        "id": "011",
+        "name": "box 11",
+        "image": "../image/box/box_11.jpg"
+    },
+    {
+        "id": "001",
+        "name": "box 12",
+        "image": "../image/box/box_12.jpg"
+    },
+    {
+        "id": "001",
+        "name": "box 13",
+        "image": "../image/box/box_13.jpg"
+    }
+]
