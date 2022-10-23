@@ -14,7 +14,7 @@ class tortas {
         <a href=${this.image} target="_blank"><img src=${this.image}
                     alt="..." class="promo_item promo_item_1 imagenes"></a>
                 <div class="d-grid gap-2 d-md-block">
-					<button class="btn btn-secondary" id=${this.id} type="button" >Agregar</button>
+					<button class="btn btn-dark" id=${this.id} type="button" >Guardar En Carpeta</button>
 				</div>
         `
         const creaciontorta = document.getElementById('creaciontorta')
