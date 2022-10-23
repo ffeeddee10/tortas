@@ -17,7 +17,7 @@ function viewcarrito() {
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">${datos.nombre}</h5>
-                            <p class="card-text">${datos.cantidad}</p>
+                            <p class="card-text">${datos.kilos}</p>
                             <button onclick = "eliminarproducto(${datos.id})" type="button" class="btn btn-outline-danger">Borrar</button>
                         </div>
                     </div>
