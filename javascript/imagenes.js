@@ -24,7 +24,6 @@ class tortas {
         const agregarproducto = document.getElementById(this.id)
         const busquedaid = torta.find(produc => produc.id == this.id)
         agregarproducto.addEventListener('click', () => guardarencarpeta(busquedaid))
-
     }
 }
 
